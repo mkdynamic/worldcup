@@ -81,6 +81,7 @@ DATA
       e.dtstart = Time.iso8601(datum.fetch(:datetime)).utc
       e.summary = get_summary(datum)
       e.location = datum.values_at(:venue, :location).join(", ")
+      e.transp = "TRANSPARENT"
     end
   end
 
