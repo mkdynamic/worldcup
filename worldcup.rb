@@ -73,6 +73,7 @@ end
 
 cal = Icalendar::Calendar.new
 cal.append_custom_property("X-WR-TIMEZONE", "UTC")
+cal.append_custom_property("X-WR-CALNAME", "2022 World Cup")
 
 DATA
   .fetch(:matches)
