@@ -80,6 +80,7 @@ DATA
   .each do |datum|
     cal.event do |e|
       e.dtstart = Time.iso8601(datum.fetch(:datetime)).utc
+      e.dtend = (Time.iso8601(datum.fetch(:datetime)) + 2.hours).utc
       e.summary = get_summary(datum)
       e.location = datum.values_at(:venue, :location).join(", ")
       e.transp = "TRANSPARENT"
